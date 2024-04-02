@@ -40,15 +40,33 @@ class Song:
         
     @classmethod
     def add_to_genre_count(cls, genre):
-        for genny in cls.genre_count:
-           cls.genre_count[genny] = cls.genre_count.get(genre,0) + 1 
-        breakpoint()
-        print(cls.genre_count["Rap"])
+        cls.genre_count[genre] = cls.genre_count.get(genre,0) + 1
+
+        # my more verbose code (with TC help to get it working, but does pass tests)
+        # if cls.genre_count == {}:
+        #     cls.genre_count[genre] = 1
+        # else:
+        #     for genny in cls.genre_count:
+        #         # breakpoint()
+        #         if genre == genny:
+        #             cls.genre_count[genny] = cls.genre_count.get(genre,0) + 1 
+        #             return
+        #     cls.genre_count[genre] = 1
+        # print(cls.genre_count["Rap"])
 
     @classmethod
     def add_to_artist_count(cls, artist):
-        for artist in cls.artist_count:
-           cls.artist_count[artist ] = cls.artist_count.get(artist ,0) + 1
-        print(cls.artist_count["Jay Z"]) 
+        cls.artist_count[artist] = cls.artist_count.get(artist ,0) + 1
 
-song = Song("99 Problems", "Jay Z", "Rap")
+# my more verbose code; logic copied from above class method.  1 line above = Pythonic
+        # if cls.artist_count == {}:
+        #     cls.artist_count[artist] = 1
+        # else:
+        #     for arty in cls.artist_count:
+        #         if artist == arty:
+        #             cls.artist_count[arty] = cls.artist_count.get(artist ,0) + 1
+        #             return
+        #     cls.artist_count[artist] = 1
+        # print(cls.artist_count["Jay Z"]) 
+
+# song = Song("99 Problems", "Jay Z", "Rap")
