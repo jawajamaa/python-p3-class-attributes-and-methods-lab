@@ -21,12 +21,12 @@ class Song:
     def add_song_to_count(cls):
         cls.count += 1
 
-
+# lines 20 - 22 take place of below class method
     # @classmethod
     # def add_song_to_count(cls, name, artist, genre, increment=1):
     #     cls.count += increment
-    #     cls.name = name
-    #     cls.artist = artist
+    #     cls.name = name                lines 28 - 30 spurious
+    #     cls.artist = artist              
     #     cls.genre = genre
 
     @classmethod
